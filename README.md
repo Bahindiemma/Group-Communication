@@ -28,18 +28,18 @@ The Assignment Submission Alert System is a Java-based application designed to f
    - `email`: User's email address.
    - Additional columns as per your requirements (e.g., profile picture, date of birth, etc.).
 
-  ## Groups table**: This table stores information about the groups created in the application.
+2. **Groups table**: This table stores information about the groups created in the application.
    - `group_id`: Unique identifier for each group.
    - `group_name`: Name or title of the group.
    - `created_by`: User ID of the user who created the group.
    - Additional columns as per your requirements (e.g., group description, creation date, etc.).
 
-## GroupMembers table**: This table establishes a many-to-many relationship between users and groups, indicating which users are members of which groups.
+ 3. **GroupMembers table**: This table establishes a many-to-many relationship between users and groups, indicating which users are members of which groups.
    - `group_id`: The group's unique identifier.
    - `user_id`: The user's unique identifier.
    - Additional columns as per your requirements (e.g., role in the group, joining date, etc.).
 
-## Messages table**: This table stores the messages sent within the groups.
+4. **Messages table**: This table stores the messages sent within the groups.
    - `message_id`: Unique identifier for each message.
    - `group_id`: The group in which the message was sent.
    - `user_id`: User ID of the sender.
