@@ -5,12 +5,14 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class MailList {
-    static Scanner scanf = new Scanner(System.in);
-    static Map<String,DiscussionDashboard> groups = new HashMap<>();
-    static Map<String,Student> students = new HashMap<>();
-
     public static void main(String[] args) {
+        Scanner scanf = new Scanner(System.in);
+        Map<String,DiscussionDashboard> groups = new HashMap<>();
+        Map<String,Student> students = new HashMap<>();
+
         System.out.println("click enter to start....");
+
+        //looping main mennu
         while(true){
         scanf.nextLine();
         System.out.println("1. Add New Student");
@@ -25,6 +27,7 @@ public class MailList {
             break;
         switch (option) {
             case 1:
+            //just type in the name of the student
                 System.out.println("Add New Student: ");
                 scanf.nextLine();
                 String student = scanf.nextLine();
@@ -32,6 +35,7 @@ public class MailList {
                 System.out.println(student+" has been added. click enter to continue....");
                 break;
             case 2:
+            //displays the added students
                 System.out.println(".......Added Students........... ");
                 int num =1;
                 for (String key: students.keySet()) {
@@ -42,6 +46,7 @@ public class MailList {
                 scanf.nextLine();
                 break;
             case 3:
+            //just type in the name of the group
                 System.out.println("Add New group: ");
                 scanf.nextLine();
                 String group = scanf.nextLine();
@@ -49,6 +54,7 @@ public class MailList {
                 System.out.println(group+" has been added. click enter to continue....");
                 break;
             case 4:
+            //displays the added groups
                 System.out.println(".......Added Groups........... ");
                 int num2 =1;
                 for (String key: groups.keySet()) {
@@ -59,6 +65,7 @@ public class MailList {
                 scanf.nextLine();
                 break;
             case 5:
+            //just type in one of the added students plus one of the added groups to complete registration
                 System.out.println("Student: ");
                 scanf.nextLine();
                 String student1 = scanf.nextLine();
@@ -68,7 +75,8 @@ public class MailList {
                 System.out.println(student1+" has been registered to "+group1+". click enter to continue....");
                 break;
             case 6:
-                System.out.println("Enter mail adress");
+            //the mail should be in the format student@group.com or group.com
+                System.out.println("Enter mail adress in format student.group.com or group.com");
                 scanf.nextLine();
                 String mail = scanf.nextLine();
 
@@ -89,6 +97,6 @@ public class MailList {
                 break;
         }
     }
-        
+        scanf.close();
     }
 }
